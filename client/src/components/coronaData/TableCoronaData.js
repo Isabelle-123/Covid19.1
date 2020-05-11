@@ -40,9 +40,9 @@ const TableCoronaData = ({ coronaData, latestDeaths }) => {
                 <TableCell align='center'>{item.hospitalizedCurrently || 0} </TableCell>
               </TableRow>
             ))}
-            {latestDeaths.map((deaths) => (
+            {latestDeaths.map((item) => (
               <TableRow key={Math.random()}>
-                <TableCell align='center'>{deaths.data}</TableCell>
+                <TableCell align='center'>{item.deaths}</TableCell>
               </TableRow>
             ))}
           </TableBody>

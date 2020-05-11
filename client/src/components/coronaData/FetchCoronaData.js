@@ -22,6 +22,7 @@ export const FetchCoronaData = () => {
       .get('http://localhost:5000/api')
       .then((res) => {
         setDeaths(res.data)
+        console.log(res)
       })
       .catch((error) => {
         console.log(error)
