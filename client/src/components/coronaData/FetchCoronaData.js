@@ -10,7 +10,6 @@ export const FetchCoronaData = () => {
     axios
       .get('https://covidtracking.com/api/v1/states/current.json')
       .then((res) => {
-        //console.log(res)
         setData(res.data)
       })
       .catch((error) => {
@@ -22,8 +21,7 @@ export const FetchCoronaData = () => {
     axios
       .get('http://localhost:5000/api')
       .then((res) => {
-        console.log(res)
-        setDeaths(res)
+        setDeaths(res.data)
       })
       .catch((error) => {
         console.log(error)

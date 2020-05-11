@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   },
 })
 
-const TableCoronaData = ({ coronaData }) => {
+const TableCoronaData = ({ coronaData, latestDeaths }) => {
   const classes = useStyles()
 
   return (
@@ -38,7 +38,11 @@ const TableCoronaData = ({ coronaData }) => {
               <TableRow key={item.state}>
                 <TableCell align='center'>{item.state}</TableCell>
                 <TableCell align='center'>{item.hospitalizedCurrently || 0} </TableCell>
-                <TableCell align='center'>Coming feature</TableCell>
+              </TableRow>
+            ))}
+            {latestDeaths.map((deaths) => (
+              <TableRow key={Math.random()}>
+                <TableCell align='center'>{deaths.data}</TableCell>
               </TableRow>
             ))}
           </TableBody>
