@@ -1,0 +1,6 @@
+import React, { Component } from 'react'
+import axios from 'axios'
+import styled from 'styled-components'
+import ContactForm from './ContactForm'
+import ContactText from './ContactPicText'
+import { response } from 'express'
